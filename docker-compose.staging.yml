@@ -1,0 +1,29 @@
+# Staging: the production stack, isolated, on http://localhost:8080.
+#
+#   docker compose -p finpilot-staging -f docker-compose.yml -f docker-compose.staging.yml \
+#     --env-file <staging env file> up -d
+#
+# Same images and same proxy as production; differences are only what a
+# sandbox needs: plain HTTP on a spare port (so no Secure cookie), its own
+# project name -> its own network and data volume, dev payments so the upgrade
+# flow can be exercised, and small free-plan limits so tests reach them fast.
+
+services:
+  backend:
+    environment:
+      COOKIE_SECURE: "false"
+      CORS_ORIGINS: http://localhost:8080
+      PAYMENTS_DEV_MODE: "true"
+      FREE_CHAT_PER_MONTH: "3"
+      FREE_REPORTS_PER_MONTH: "1"
+      FREE_FILES_PER_MONTH: "60"
+      # passed through from the staging env file (never committed)
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      LLM_ENABLED: ${LLM_ENABLED:-true}
+      AGENT_ENABLED: ${AGENT_ENABLED:-true}
+
+  caddy:
+    ports: !override
+      - "8080:80"
+    environment:
+      SITE_ADDRESS: ":80"

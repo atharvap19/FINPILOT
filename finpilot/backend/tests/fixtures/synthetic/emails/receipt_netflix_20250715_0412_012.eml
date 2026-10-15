@@ -1,0 +1,28 @@
+From: Netflix <info@mailer.netflix.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Your Netflix receipt
+Date: Tue, 15 Jul 2025 04:12:00 +0530
+Message-ID: <fp00012@mailer.netflix.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00012"
+
+------=_FinPilot_fp00012
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your Netflix payment receipt
+Amount charged: Rs. 649.00
+Date: 15 Jul 2025
+Plan: Standard
+Reference: 9876543201
+
+------=_FinPilot_fp00012
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h3>Your Netflix payment receipt</h3><p>Amount charged: Rs. 649.0=
+0</p><p>Date: 15 Jul 2025</p><p>Plan: Standard</p><p>Reference: 9876543201</p=
+></body></html>
+
+------=_FinPilot_fp00012--

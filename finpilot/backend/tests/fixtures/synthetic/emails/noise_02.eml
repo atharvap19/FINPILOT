@@ -1,0 +1,22 @@
+From: notifications@linkedin.example
+To: aarav.sharma@example.com
+Subject: You have 4 new profile views
+Date: Sat, 12 Jul 2025 09:02:00 +0530
+Message-ID: <noise2@example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_noise02"
+
+------=_FinPilot_noise02
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+See who viewed your profile this week.
+
+------=_FinPilot_noise02
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+<html><body><p>See who viewed your profile this week.</p></body></html>
+
+------=_FinPilot_noise02--

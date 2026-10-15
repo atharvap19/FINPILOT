@@ -1,0 +1,40 @@
+From: Amazon.in <auto-confirm@amazon.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Your Amazon.in order 402-0005054-3715947
+Date: Thu, 24 Jul 2025 15:56:00 +0530
+Message-ID: <fp00014@amazon.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00014"
+
+------=_FinPilot_fp00014
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your Amazon order is confirmed
+Order ID: 402-0005054-3715947
+Placed on 24 Jul 2025 at 03:56 PM
+ItemQtyAmount
+Kitchen Storage Containers Set	1	Rs. 2,915.45
+
+Item total	Rs. 2,915.45
+GST (included)	Rs. 444.73
+Grand total	Rs. 2,915.45
+
+Paid using State Bank of India A/c XX8901 &middot; UPI Ref 500000005054
+
+------=_FinPilot_fp00014
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h2>Your Amazon order is confirmed</h2><p>Order ID: <b>402-000505=
+4-3715947</b></p><p>Placed on 24 Jul 2025 at 03:56 PM</p><table border=3D'1' =
+cellpadding=3D'4'><tr><th>Item</th><th>Qty</th><th>Amount</th></tr><tr><td>Ki=
+tchen Storage Containers Set</td><td align=3D'center'>1</td><td align=3D'righ=
+t'>Rs. 2,915.45</td></tr></table><table cellpadding=3D'3'><tr><td>Item total<=
+/td><td align=3D'right'>Rs. 2,915.45</td></tr><tr><td>GST (included)</td><td =
+align=3D'right'>Rs. 444.73</td></tr><tr><td>Grand total</td><td align=3D'righ=
+t'>Rs. 2,915.45</td></tr></table><p>Paid using State Bank of India A/c XX8901=
+ &middot; UPI Ref 500000005054</p></body></html>
+
+------=_FinPilot_fp00014--

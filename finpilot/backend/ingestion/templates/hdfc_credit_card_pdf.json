@@ -1,0 +1,27 @@
+{
+  "name": "HDFC Bank credit card statement PDF",
+  "issuer": "HDFC Bank",
+  "document_type": "cc_statement",
+  "account_type": "credit_card",
+  "amount_style": "dr_cr_suffix",
+  "narration_dialect": "card",
+  "dayfirst": true,
+  "header_tokens": [
+    "Date",
+    "Transaction Description",
+    "MCC",
+    "Amount (in Rs.)"
+  ],
+  "columns": {
+    "date": "Date",
+    "description": "Transaction Description",
+    "mcc": "MCC",
+    "amount": "Amount (in Rs.)"
+  },
+  "footer_markers": [
+    "system generated",
+    "late payment charges",
+    "total dues"
+  ],
+  "source": "builtin"
+}

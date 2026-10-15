@@ -1,0 +1,37 @@
+{
+  "name": "Custom svgBank_large_transaction_dataset_500_rows",
+  "columns": {
+    "date": "Transaction Date",
+    "description": "Description",
+    "merchant": "Merchant",
+    "account": "Account",
+    "dr_cr_flag": "Transaction Type",
+    "payment_mode": "Mode",
+    "amount": "Amount",
+    "currency": "Currency",
+    "mcc": "Category",
+    "reference_no": "Transaction ID"
+  },
+  "amount_style": "dr_cr_flag",
+  "issuer": null,
+  "document_type": "spreadsheet",
+  "account_type": "bank",
+  "narration_dialect": "generic",
+  "dayfirst": true,
+  "header_tokens": [
+    "Transaction Date",
+    "Description",
+    "Merchant",
+    "Account",
+    "Transaction Type",
+    "Mode",
+    "Source",
+    "Amount",
+    "Currency",
+    "Category",
+    "Transaction ID"
+  ],
+  "footer_markers": [],
+  "source": "learned",
+  "fingerprint": "55177cc0c84706d3"
+}

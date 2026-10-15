@@ -1,0 +1,44 @@
+From: Swiggy <noreply@swiggy.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Order SWG90000101 confirmed - Rs. 512.00
+Date: Tue, 02 Sep 2025 20:35:00 +0530
+Message-ID: <fp00023@swiggy.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00023"
+
+------=_FinPilot_fp00023
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your Swiggy order is confirmed
+Order ID: SWG90000101
+Placed on 02 Sep 2025 at 08:35 PM
+ItemQtyAmount
+Veg Biryani	1	Rs. 229.00
+Paneer Butter Masala	1	Rs. 248.00
+
+Item total	Rs. 477.00
+Delivery fee	Rs. 35.00
+GST (included)	Rs. 24.38
+Grand total	Rs. 512.00
+
+Paid using HDFC Bank A/c XX7890 &middot; UPI Ref 590000000101
+
+------=_FinPilot_fp00023
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h2>Your Swiggy order is confirmed</h2><p>Order ID: <b>SWG9000010=
+1</b></p><p>Placed on 02 Sep 2025 at 08:35 PM</p><table border=3D'1' cellpadd=
+ing=3D'4'><tr><th>Item</th><th>Qty</th><th>Amount</th></tr><tr><td>Veg Biryan=
+i</td><td align=3D'center'>1</td><td align=3D'right'>Rs. 229.00</td></tr><tr>=
+<td>Paneer Butter Masala</td><td align=3D'center'>1</td><td align=3D'right'>R=
+s. 248.00</td></tr></table><table cellpadding=3D'3'><tr><td>Item total</td><t=
+d align=3D'right'>Rs. 477.00</td></tr><tr><td>Delivery fee</td><td align=3D'r=
+ight'>Rs. 35.00</td></tr><tr><td>GST (included)</td><td align=3D'right'>Rs. 2=
+4.38</td></tr><tr><td>Grand total</td><td align=3D'right'>Rs. 512.00</td></tr=
+></table><p>Paid using HDFC Bank A/c XX7890 &middot; UPI Ref 590000000101</p>=
+</body></html>
+
+------=_FinPilot_fp00023--

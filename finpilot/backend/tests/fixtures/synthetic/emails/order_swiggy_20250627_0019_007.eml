@@ -1,0 +1,41 @@
+From: Swiggy <noreply@swiggy.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Order SWG00005028 confirmed - Rs. 521.63
+Date: Fri, 27 Jun 2025 00:19:00 +0530
+Message-ID: <fp00007@swiggy.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00007"
+
+------=_FinPilot_fp00007
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your Swiggy order is confirmed
+Order ID: SWG00005028
+Placed on 27 Jun 2025 at 12:19 AM
+ItemQtyAmount
+Filter Coffee	1	Rs. 496.63
+
+Item total	Rs. 496.63
+Delivery fee	Rs. 25.00
+GST (included)	Rs. 24.84
+Grand total	Rs. 521.63
+
+Paid using HDFC Bank A/c XX7890 &middot; UPI Ref 500000005028
+
+------=_FinPilot_fp00007
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h2>Your Swiggy order is confirmed</h2><p>Order ID: <b>SWG0000502=
+8</b></p><p>Placed on 27 Jun 2025 at 12:19 AM</p><table border=3D'1' cellpadd=
+ing=3D'4'><tr><th>Item</th><th>Qty</th><th>Amount</th></tr><tr><td>Filter Cof=
+fee</td><td align=3D'center'>1</td><td align=3D'right'>Rs. 496.63</td></tr></=
+table><table cellpadding=3D'3'><tr><td>Item total</td><td align=3D'right'>Rs.=
+ 496.63</td></tr><tr><td>Delivery fee</td><td align=3D'right'>Rs. 25.00</td><=
+/tr><tr><td>GST (included)</td><td align=3D'right'>Rs. 24.84</td></tr><tr><td=
+>Grand total</td><td align=3D'right'>Rs. 521.63</td></tr></table><p>Paid usin=
+g HDFC Bank A/c XX7890 &middot; UPI Ref 500000005028</p></body></html>
+
+------=_FinPilot_fp00007--

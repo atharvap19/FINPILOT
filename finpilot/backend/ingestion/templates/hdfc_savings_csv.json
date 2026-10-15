@@ -1,0 +1,34 @@
+{
+  "name": "HDFC Bank savings CSV",
+  "issuer": "HDFC Bank",
+  "document_type": "bank_statement",
+  "account_type": "bank",
+  "amount_style": "debit_credit",
+  "narration_dialect": "hdfc",
+  "dayfirst": true,
+  "header_tokens": [
+    "Date",
+    "Narration",
+    "Chq./Ref.No.",
+    "Value Dt",
+    "Withdrawal Amt.",
+    "Deposit Amt.",
+    "Closing Balance"
+  ],
+  "columns": {
+    "date": "Date",
+    "description": "Narration",
+    "reference_no": "Chq./Ref.No.",
+    "value_date": "Value Dt",
+    "debit": "Withdrawal Amt.",
+    "credit": "Deposit Amt.",
+    "balance_after": "Closing Balance"
+  },
+  "footer_markers": [
+    "end of statement",
+    "computer generated",
+    "total",
+    "statement summary"
+  ],
+  "source": "builtin"
+}

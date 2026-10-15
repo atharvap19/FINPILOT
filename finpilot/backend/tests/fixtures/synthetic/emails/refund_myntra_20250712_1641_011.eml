@@ -1,0 +1,27 @@
+From: Myntra <noreply@myntra.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Refund processed for order MYN-1180042317
+Date: Sat, 12 Jul 2025 16:41:00 +0530
+Message-ID: <fp00011@myntra.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00011"
+
+------=_FinPilot_fp00011
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your refund has been processed
+Order ID: MYN-1180042317
+Refund amount: Rs. 2,499.00
+Credited on 12 Jul 2025 to your bank account. Reference 500000000010.
+
+------=_FinPilot_fp00011
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h3>Your refund has been processed</h3><p>Order ID: <b>MYN-118004=
+2317</b></p><p>Refund amount: Rs. 2,499.00</p><p>Credited on 12 Jul 2025 to y=
+our bank account. Reference 500000000010.</p></body></html>
+
+------=_FinPilot_fp00011--

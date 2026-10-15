@@ -1,0 +1,35 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# secrets and data
+.env
+.env.local
+finpilot/backend/data/
+*.db
+*.db-wal
+*.db-shm
+
+# node
+node_modules/
+.next/
+out/
+.turbo/
+
+# os
+.DS_Store
+Thumbs.db
+
+# deployment secrets (the .example template is committed)
+.env.production
+
+# black-box test fixtures and reports (generated)
+e2e/fixtures/
+e2e/reports/
+e2e/node_modules/

@@ -1,0 +1,22 @@
+From: deals@shopping-daily.example
+To: aarav.sharma@example.com
+Subject: Your weekly deals roundup - up to 70% off!
+Date: Thu, 10 Jul 2025 09:00:00 +0530
+Message-ID: <noise0@example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_noise00"
+
+------=_FinPilot_noise00
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Massive savings await. Shop now.
+
+------=_FinPilot_noise00
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+<html><body><p>Massive savings await. Shop now.</p></body></html>
+
+------=_FinPilot_noise00--

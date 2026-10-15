@@ -1,0 +1,23 @@
+From: noreply@hdfcbank.net
+To: aarav.sharma@example.com
+Subject: OTP for your transaction
+Date: Fri, 11 Jul 2025 09:01:00 +0530
+Message-ID: <noise1@example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_noise01"
+
+------=_FinPilot_noise01
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your OTP is 448271. Do not share it with anyone.
+
+------=_FinPilot_noise01
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Your OTP is 448271. Do not share it with anyone.</p></body></h=
+tml>
+
+------=_FinPilot_noise01--

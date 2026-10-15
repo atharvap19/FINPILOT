@@ -1,0 +1,27 @@
+From: HDFC Bank Alerts <alerts@hdfcbank.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Update on your HDFC Bank A/c
+Date: Sat, 21 Jun 2025 22:47:00 +0530
+Message-ID: <fp00005@hdfcbank.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00005"
+
+------=_FinPilot_fp00005
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+Rs. 1,200.00 has been debited from HDFC Bank A/c XX7890 on 21-06-25 at 22:47 =
+to VPA 9820045612@ybl. UPI Ref No 500000000011.
+Not you? Call 18002026161 immediately.
+
+------=_FinPilot_fp00005
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Dear Customer,</p><p>Rs. 1,200.00 has been debited from HDFC B=
+ank A/c XX7890 on 21-06-25 at 22:47 to VPA 9820045612@ybl. UPI Ref No 5000000=
+00011.</p><p>Not you? Call 18002026161 immediately.</p></body></html>
+
+------=_FinPilot_fp00005--

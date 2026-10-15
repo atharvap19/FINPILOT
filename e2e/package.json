@@ -1,0 +1,17 @@
+{
+  "name": "finpilot-e2e",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node blackbox.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": "true",
+  "type": "module",
+  "dependencies": {
+    "playwright-core": "^1.49.1"
+  }
+}

@@ -1,0 +1,44 @@
+From: Myntra <noreply@myntra.example>
+To: Aarav Sharma <aarav.sharma@example.com>
+Subject: Myntra order MYN-1180042317 confirmed
+Date: Fri, 04 Jul 2025 21:06:00 +0530
+Message-ID: <fp00009@myntra.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_FinPilot_fp00009"
+
+------=_FinPilot_fp00009
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your Myntra order is confirmed
+Order ID: MYN-1180042317
+Placed on 04 Jul 2025 at 09:06 PM
+ItemQtyAmount
+Roadster Slim Fit Shirt	1	Rs. 1,499.00
+HRX Running Socks (3 pack)	1	Rs. 899.00
+
+Item total	Rs. 2,398.00
+Delivery fee	Rs. 101.00
+GST (included)	Rs. 381.20
+Grand total	Rs. 2,499.00
+
+Paid using HDFC Bank A/c XX7890 &middot; UPI Ref 500000000009
+
+------=_FinPilot_fp00009
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><h2>Your Myntra order is confirmed</h2><p>Order ID: <b>MYN-118004=
+2317</b></p><p>Placed on 04 Jul 2025 at 09:06 PM</p><table border=3D'1' cellp=
+adding=3D'4'><tr><th>Item</th><th>Qty</th><th>Amount</th></tr><tr><td>Roadste=
+r Slim Fit Shirt</td><td align=3D'center'>1</td><td align=3D'right'>Rs. 1,499=
+.00</td></tr><tr><td>HRX Running Socks (3 pack)</td><td align=3D'center'>1</t=
+d><td align=3D'right'>Rs. 899.00</td></tr></table><table cellpadding=3D'3'><t=
+r><td>Item total</td><td align=3D'right'>Rs. 2,398.00</td></tr><tr><td>Delive=
+ry fee</td><td align=3D'right'>Rs. 101.00</td></tr><tr><td>GST (included)</td=
+><td align=3D'right'>Rs. 381.20</td></tr><tr><td>Grand total</td><td align=3D=
+'right'>Rs. 2,499.00</td></tr></table><p>Paid using HDFC Bank A/c XX7890 &mid=
+dot; UPI Ref 500000000009</p></body></html>
+
+------=_FinPilot_fp00009--

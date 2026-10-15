@@ -1,0 +1,65 @@
+# FinPilot in production: one machine, one domain.
+#
+#   https://DOMAIN/        -> frontend (Next.js)
+#   https://DOMAIN/api/... -> backend  (FastAPI)
+#
+# Caddy terminates HTTPS (certificates are automatic) and keeps everything on
+# one origin, so the session cookie stays first-party and no CORS is needed.
+# Configure with a .env file next to this one -- see .env.production.example.
+#
+#   docker compose up -d --build
+
+services:
+  backend:
+    build: ./finpilot/backend
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATA_DIR: /data
+      AUTH_REQUIRED: "true"
+      # don't advertise the API schema publicly
+      API_DOCS: "false"
+      COOKIE_SECURE: ${COOKIE_SECURE:-true}
+      CORS_ORIGINS: https://${DOMAIN}
+      # links in password-reset emails
+      PUBLIC_URL: https://${DOMAIN}
+      # daily app + audit logs, kept 180 days (CERT-In)
+      LOG_DIR: /data/logs
+    volumes:
+      - finpilot-data:/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./finpilot/frontend
+      args:
+        NEXT_PUBLIC_API_BASE: ""
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  caddy:
+    image: caddy:2.8.4
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-${DOMAIN}}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+      - caddy-logs:/var/log/caddy
+    restart: unless-stopped
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  # the database, uploads, exports and the document index -- back this up
+  finpilot-data:
+  caddy-data:
+  caddy-config:
+  # access logs, kept 180 days (CERT-In)
+  caddy-logs:

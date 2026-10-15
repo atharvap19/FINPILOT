@@ -1,0 +1,55 @@
+# SITE_ADDRESS is your domain (finpilot.example.com) in production -- Caddy
+# then obtains and renews the HTTPS certificate on its own. Set it to ":80"
+# for a plain-HTTP local test.
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	# Access log for security investigations, kept 180 days as CERT-In asks.
+	# Caddy already redacts Cookie and Authorization headers; password-reset
+	# tokens travel in the query string, so those are redacted too.
+	log {
+		output file /var/log/caddy/access.log {
+			roll_size 50MiB
+			roll_keep_for 4320h
+		}
+		format filter {
+			wrap json
+			fields {
+				request>uri query {
+					replace token REDACTED
+				}
+			}
+		}
+	}
+
+	# statements can be large
+	request_body {
+		max_size 60MB
+	}
+
+	handle /api/* {
+		# flush immediately: chat and report generation stream their steps
+		reverse_proxy backend:8000 {
+			flush_interval -1
+			transport http {
+				read_timeout 10m
+			}
+		}
+	}
+
+	handle {
+		reverse_proxy frontend:3000
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		# no framing (clickjacking); scripts only from this site and Razorpay
+		# Checkout. 'unsafe-inline' is needed by Next.js's inline bootstrap.
+		X-Frame-Options DENY
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.razorpay.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://*.razorpay.com; frame-src https://api.razorpay.com https://checkout.razorpay.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+}

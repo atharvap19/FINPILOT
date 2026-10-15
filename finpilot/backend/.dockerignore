@@ -1,0 +1,15 @@
+# never ship secrets or local data in the image
+.env
+.env.*
+data/
+*.db
+*.db-wal
+*.db-shm
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/

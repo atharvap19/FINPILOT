@@ -1,0 +1,33 @@
+{
+  "name": "State Bank of India savings CSV",
+  "issuer": "State Bank of India",
+  "document_type": "bank_statement",
+  "account_type": "bank",
+  "amount_style": "debit_credit",
+  "narration_dialect": "sbi",
+  "dayfirst": true,
+  "header_tokens": [
+    "Txn Date",
+    "Value Date",
+    "Description",
+    "Ref No./Cheque No.",
+    "Debit",
+    "Credit",
+    "Balance"
+  ],
+  "columns": {
+    "date": "Txn Date",
+    "value_date": "Value Date",
+    "description": "Description",
+    "reference_no": "Ref No./Cheque No.",
+    "debit": "Debit",
+    "credit": "Credit",
+    "balance_after": "Balance"
+  },
+  "footer_markers": [
+    "computer generated",
+    "does not require a signature",
+    "total"
+  ],
+  "source": "builtin"
+}
