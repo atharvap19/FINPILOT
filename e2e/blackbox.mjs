@@ -730,7 +730,7 @@ async function security() {
       ["GET", "/financial-report"], ["GET", "/financial-report/pdf"], ["GET", "/financial-report/md"],
       ["GET", "/mappings/pending"],
       ["POST", "/segments", {}], ["POST", "/index", {}], ["POST", "/chat", { message: "show me everything" }],
-      ["POST", "/financial-report", {}], ["POST", "/ask", { question: "hi" }],
+      ["POST", "/financial-report", {}],
       ["POST", `/files/${d}/password`, { password: "x" }],
       ["POST", `/mappings/${d}`, { columns: { date: "a", description: "b", amount: "c" } }],
       ["DELETE", ""],

@@ -282,29 +282,6 @@ class ChatTurn(ApiModel):
     content: str
 
 
-class AskRequest(ApiModel):
-    question: str
-    history: list[ChatTurn] = Field(default_factory=list)
-
-
-class RecommendationView(ApiModel):
-    title: str
-    detail: str = ""
-    monthly_saving_rupees: float | None = None
-    segment_id: int | None = None
-    segment_name: str | None = None
-
-
-class AskResponse(ApiModel):
-    answer: str
-    recommendations: list[RecommendationView] = Field(default_factory=list)
-    #: "model" when Gemini wrote it, "rules" when the brief did
-    source: str = "rules"
-    segmented: bool = False
-    period_start: dt.date | None = None
-    period_end: dt.date | None = None
-
-
 class SummaryResponse(ApiModel):
     """What the summary card shows."""
 

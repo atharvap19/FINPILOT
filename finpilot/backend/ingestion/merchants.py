@@ -246,9 +246,6 @@ class MerchantResolver:
     def canonical_names(self) -> list[str]:
         return sorted(self._canonical)
 
-    def aliases_for(self, canonical: str) -> list[str]:
-        return sorted(a for a, c in self._index.items() if c == canonical)
-
     def is_known(self, name: str | None) -> bool:
         """Used by narration parsing to tell a shop from a person."""
         if not name:
@@ -386,6 +383,3 @@ def default_resolver() -> MerchantResolver:
     return _DEFAULT
 
 
-def reset_default_resolver() -> None:
-    global _DEFAULT
-    _DEFAULT = None

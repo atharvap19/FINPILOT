@@ -214,9 +214,6 @@ class Template:
     def loose(self) -> str:
         return loose_fingerprint(self.header_tokens)
 
-    def column_for(self, canonical: str) -> str | None:
-        return self.columns.get(canonical)
-
     def to_json(self) -> dict[str, Any]:
         data = asdict(self)
         data["fingerprint"] = self.fingerprint

@@ -18,7 +18,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.api.routes.account import router as account_router
-from app.api.routes.advice import router as advice_router
 from app.api.routes.agent import router as agent_router
 from app.api.routes.insights import router as insights_router
 from app.api.routes.jobs import router as jobs_router
@@ -90,7 +89,6 @@ app.add_middleware(
 app.include_router(account_router)
 app.include_router(jobs_router)
 app.include_router(segments_router)
-app.include_router(advice_router)
 app.include_router(agent_router)
 app.include_router(insights_router)
 

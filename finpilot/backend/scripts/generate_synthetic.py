@@ -920,15 +920,6 @@ def build_ground_truth(
     return rows, obligations
 
 
-def _occurrence_map(rows: list[dict]) -> None:
-    """No-op placeholder: the generator produces no colliding identity tuples.
-
-    Kept as documentation -- if a future scenario does create two rows with the
-    same account/date/amount/direction/reference, the pipeline assigns
-    ``occurrence`` by position and the generator must do the same.
-    """
-
-
 def _expected_row(exp: Expected) -> dict:
     e = exp.entry
     if e.account is HDFC:

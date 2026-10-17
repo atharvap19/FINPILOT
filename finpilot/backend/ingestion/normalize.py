@@ -133,17 +133,6 @@ def parse_time(value: object) -> dt.time | None:
     return dt.time(hour, minute, second)
 
 
-def within(date: dt.date | None, start: dt.date | None, end: dt.date | None,
-           slack_days: int = 0) -> bool:
-    if date is None:
-        return False
-    if start and date < start - dt.timedelta(days=slack_days):
-        return False
-    if end and date > end + dt.timedelta(days=slack_days):
-        return False
-    return True
-
-
 # --------------------------------------------------------------------------
 # amounts
 # --------------------------------------------------------------------------
@@ -315,13 +304,6 @@ def mask_upi_handle(vpa: str | None) -> str | None:
         return None
     domain = vpa.rsplit("@", 1)[-1].strip().lower()
     return f"@{domain}" if domain else None
-
-
-def mask_vpa(vpa: str) -> str:
-    """``ramesh.kumar@okaxis`` -> ``XXXX@okaxis`` (for in-narration masking)."""
-    if "@" not in vpa:
-        return vpa
-    return f"{MASK_CHAR * 4}@{vpa.rsplit('@', 1)[-1]}"
 
 
 def mask_text(text: object) -> str:

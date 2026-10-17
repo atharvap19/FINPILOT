@@ -22,7 +22,7 @@ and correct is worth more than a row that silently vanished.
 from __future__ import annotations
 
 import datetime as dt
-from collections.abc import Iterable, Sequence
+from collections.abc import Sequence
 from dataclasses import asdict, dataclass, field
 from decimal import Decimal
 from typing import Any
@@ -55,10 +55,6 @@ class Issue:
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
-
-
-def has_errors(issues: Iterable[Issue]) -> bool:
-    return any(i.severity == ERROR for i in issues)
 
 
 # --------------------------------------------------------------------------

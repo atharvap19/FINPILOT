@@ -8,10 +8,10 @@ Three things live here:
 
 * the enums every stage shares,
 * the pydantic row models -- ``Transaction``, ``Obligation``, ``Item``,
-  ``TxnLink``, ``DocumentRecord`` -- which every extractor must satisfy
+  ``TxnLink`` -- which every extractor must satisfy
   (principle 3: one schema, one gate), and
 * the canonical column orders used by the CSV exports, plus the pandera
-  DataFrame schemas used for frame-level validation.
+  DataFrame schema used for frame-level validation.
 
 Money is always ``Decimal`` and always positive; the sign lives in
 ``direction``. Columns owned by later stages are declared here as nullable and
@@ -513,30 +513,6 @@ class TxnLink(FinPilotModel):
     match_score: float = 1.0
 
 
-class DocumentRecord(FinPilotModel):
-    doc_id: str
-    filename: str
-    file_hash: str
-    file_type: str
-    document_type: DocumentType = DocumentType.UNKNOWN
-    issuer: str | None = None
-    account: str | None = None
-    statement_start: dt.date | None = None
-    statement_end: dt.date | None = None
-    opening_balance: Decimal | None = None
-    closing_balance: Decimal | None = None
-    extraction_method: ExtractionMethod | None = None
-    status: DocumentStatus = DocumentStatus.QUEUED
-    issues: list[dict[str, Any]] = Field(default_factory=list)
-    uploaded_at: dt.datetime | None = None
-
-
-class MerchantRecord(FinPilotModel):
-    merchant_id: str
-    canonical_name: str
-    aliases: list[str] = Field(default_factory=list)
-
-
 # --------------------------------------------------------------------------
 # canonical column orders (the CSV contract)
 # --------------------------------------------------------------------------
@@ -712,18 +688,6 @@ class TransactionFrame(pa.DataFrameModel):
     def _source_ref_shape(cls, s: Series[str]) -> Series[bool]:
         """Principle 4: every row points back at a file and a row/page."""
         return s.str.contains("#", regex=False, na=False)
-
-
-class ObligationFrame(pa.DataFrameModel):
-    bill_id: Series[str] = pa.Field(unique=True, nullable=False)
-    biller: Series[str] = pa.Field(nullable=False)
-    amount_due: Series[float] = pa.Field(ge=0, coerce=True)
-    status: Series[str] = pa.Field(isin=[o.value for o in ObligationStatus])
-    source_ref: Series[str] = pa.Field(nullable=False)
-
-    class Config:  # type: ignore[override]
-        strict = False
-        coerce = True
 
 
 # --------------------------------------------------------------------------

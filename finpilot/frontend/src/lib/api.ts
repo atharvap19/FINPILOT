@@ -324,23 +324,6 @@ export interface ChatTurn {
   content: string;
 }
 
-export interface Recommendation {
-  title: string;
-  detail: string;
-  monthly_saving_rupees: number | null;
-  segment_id: number | null;
-  segment_name: string | null;
-}
-
-export interface AdviceReply {
-  answer: string;
-  recommendations: Recommendation[];
-  source: "model" | "rules";
-  segmented: boolean;
-  period_start: string | null;
-  period_end: string | null;
-}
-
 /** A document passage the agent cited. */
 export interface AgentSource {
   filename: string;
@@ -726,15 +709,6 @@ export const api = {
   completeDevPayment: (order_id: string) =>
     request<Account>("/api/billing/dev-complete", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ order_id }) }),
 
-  health: () =>
-    request<{
-      status: string;
-      llm: { configured: boolean; enabled: boolean };
-      agent: { available: boolean; model: string };
-      embeddings: boolean;
-      templates: string[];
-    }>("/api/health"),
-
   createJob: (files: File[]) => {
     const body = new FormData();
     for (const file of files) body.append("files", file, file.name);
@@ -780,21 +754,11 @@ export const api = {
       body: JSON.stringify({ password }),
     }),
 
-  segmentation: (jobId: string) =>
-    request<Segmentation>(`/api/jobs/${jobId}/segments`),
-
   runSegmentation: (jobId: string) =>
     request<Segmentation>(`/api/jobs/${jobId}/segments`, { method: "POST" }),
 
   segmentChart: (jobId: string) =>
     request<SegmentChartData>(`/api/jobs/${jobId}/segments/chart`),
-
-  ask: (jobId: string, question: string, history: ChatTurn[] = []) =>
-    request<AdviceReply>(`/api/jobs/${jobId}/ask`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, history }),
-    }),
 
   exportUrl: (jobId: string, name: string) =>
     `${API_BASE}/api/jobs/${jobId}/export/${name}`,

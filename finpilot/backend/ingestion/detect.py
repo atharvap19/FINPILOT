@@ -46,10 +46,6 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def sha256_bytes(blob: bytes) -> str:
-    return hashlib.sha256(blob).hexdigest()
-
-
 # --------------------------------------------------------------------------
 # file type
 # --------------------------------------------------------------------------
@@ -203,18 +199,6 @@ def inspect_pdf(path: Path, password: str | None = None) -> PdfInfo:
     except Exception as exc:  # noqa: BLE001
         info.error = f"could not read PDF text: {exc}"
     return info
-
-
-def decrypt_pdf(path: Path, password: str, out_path: Path) -> bool:
-    """Write an unlocked copy. The password is not retained afterwards."""
-    try:
-        import pikepdf
-
-        with pikepdf.open(path, password=password) as pdf:
-            pdf.save(out_path)
-        return True
-    except Exception:  # noqa: BLE001
-        return False
 
 
 # --------------------------------------------------------------------------

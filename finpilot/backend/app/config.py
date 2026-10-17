@@ -51,10 +51,9 @@ class Settings(BaseSettings):
     segment_min_cluster_size: int = Field(default=5)
     segment_min_samples: int | None = Field(default=None)
 
-    # --- the naming / advice model ---------------------------------------
+    # --- the segment-naming model ----------------------------------------
     #: Extraction uses no model at all. Gemini is used to name clusters from
-    #: aggregate profiles, and to write recommendations from the same kind of
-    #: brief. It never sees raw statement rows.
+    #: aggregate profiles. It never sees raw statement rows.
     gemini_api_key: str = Field(default="")
     gemini_naming_model: str = Field(default="gemini-3.5-flash-lite")
     llm_enabled: bool = Field(default=True)

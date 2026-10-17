@@ -120,14 +120,6 @@ export function useTransaction(jobId: string | null, txnId: string | null) {
   };
 }
 
-export function useLlmConfigured(): boolean | null {
-  const { data } = useSWR("health", api.health, {
-    revalidateOnFocus: false,
-    shouldRetryOnError: false,
-  });
-  return data ? data.llm.configured : null;
-}
-
 // ---------------------------------------------------------------------------
 // the remembered job id
 // ---------------------------------------------------------------------------

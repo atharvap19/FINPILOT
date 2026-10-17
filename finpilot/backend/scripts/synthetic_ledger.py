@@ -834,11 +834,6 @@ def _assign_balances(entries: list[Entry]) -> None:
             e.balance_after = balance.quantize(Decimal("0.01"))
 
 
-def account_closing_balance(entries: list[Entry], account: Account, upto: dt.date) -> Decimal:
-    rows = [e for e in entries if e.account is account and e.date <= upto]
-    return rows[-1].balance_after if rows else (account.opening_balance or Decimal("0.00"))
-
-
 def account_opening_balance(entries: list[Entry], account: Account, start: dt.date) -> Decimal:
     prior = [e for e in entries if e.account is account and e.date < start]
     if not prior:

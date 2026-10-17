@@ -30,7 +30,6 @@ from sqlalchemy.orm import Session
 from app.config import get_settings
 from app.db.models import (
     AuthSession,
-    Document,
     ItemRow,
     Job,
     ObligationRow,
@@ -226,10 +225,3 @@ uploads/<id>/  per upload: the cleaned ledger (transactions.csv), bills
 """
 
 
-def raw_upload_age_days(job: Job, now: dt.datetime | None = None) -> float:
-    now = now or dt.datetime.now(dt.UTC).replace(tzinfo=None)
-    return (now - job.created_at).total_seconds() / 86400
-
-
-def documents_for(session: Session, job_id: str) -> list[Document]:
-    return list(session.scalars(select(Document).where(Document.job_id == job_id)))
